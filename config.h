@@ -66,7 +66,13 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function format          argument turn signal */
-	{ datetime, "%s",           "%F %T", 1,   -1 },
+    { keymap,   "  %s"  , NULL, 1,    3 },                            
+	{ ram_free, " FM%s" , NULL, 1,   -1 },
+	{ ram_used, " UM%s" , NULL, 1,   -1 },
+	{ cpu_freq, " F%s"  , NULL, 1,   -1 },
+	{ cpu_perc, " C%s%%", NULL, 1,   -1 },
+    { run_command,  " V%s%",  "bash -c 'pamixer --get-mute | grep true &>/dev/null && echo M || pamixer --get-volume'", -1, 2 },             
+	{ datetime, " %s",  "%Y %b %d %a %T", 1,   -1 },
 };
 
 /* maximum output string length */
