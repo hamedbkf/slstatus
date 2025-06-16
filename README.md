@@ -1,3 +1,8 @@
+Patches applied
+---------------
+- slstatus-signals-1.0 [Link](https://tools.suckless.org/slstatus/patches/signals/slstatus-signals-1.0.patch)
+
+
 slstatus - suckless status
 ==========================
 slstatus is a small tool for providing system status information to other
